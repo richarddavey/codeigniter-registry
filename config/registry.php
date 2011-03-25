@@ -1,24 +1,18 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------
-| LAYOUT CONFIG
+| REGISTRY CONFIG
 | -------------------------------------------------------------------
-| This file will contain the settings needed to parse a layout.
+| This file will contain the settings needed to load the registry.
 |
 | -------------------------------------------------------------------
 | EXPLANATION OF VARIABLES
 | -------------------------------------------------------------------
 |
-|	['active'] 			TRUE/FALSE - Enables/disables layout templates
-|	['clean_output'] 	In layout parsing, should all whitespace be removed
-|	['layout_dir'] 		The path relative to the aplication for the layout folder
-|	['layout'] 			The default layout file
-|	['layout_var'] 		The variable name in the layout file to replace
+|	['reg_use_database']	TRUE/FALSE - Enables/disables use of the database
+|	['reg_table_name'] 		The table to use if database is enabled
 |
 */
 
-$config['active']           = TRUE;
-$config['clean_output']     = TRUE;
-$config['layout_dir']       = 'layouts/';
-$config['layout']           = 'default';
-$config['layout_var']       = 'content';
+$config['reg_use_database'] = TRUE;
+$config['reg_table_name']   = 'registry';
