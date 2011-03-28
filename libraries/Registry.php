@@ -180,12 +180,17 @@ class Registry {
 	{
 		// get generic settings
 		$query = $this->CI->db->get($this->reg_table_name);
+		
+		if ($query->num_rows() > 0) 
+		{ 	
 			
-		// loop
-		foreach ($query->result() as $row) {
-				
-			// get results
-			$this->registry->{$row->key} = $row->value;
+			// loop
+			foreach ($query->result() as $row) 
+			{
+					
+				// get results
+				$this->registry->{$row->key} = $row->value;
+			}
 		}
 	}
 	
