@@ -84,7 +84,7 @@ class Registry {
 		{
 			foreach ($params as $key => $val)
 			{
-				if (isset($this->$key))
+				if (in_array($key, array('reg_use_database', 'reg_table_name')) AND isset($this->$key))
 				{
 					$this->$key = $val;
 				}
