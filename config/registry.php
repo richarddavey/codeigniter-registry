@@ -16,3 +16,6 @@
 
 $config['reg_use_database'] = TRUE;
 $config['reg_table_name']   = 'registry';
+
+/* End of file registry.php */
+/* Location: ./application/config/registry.php */

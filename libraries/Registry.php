@@ -195,7 +195,6 @@ class Registry {
 	}
 	
 }
-
 // END Registry Class
 
 /* End of file Registry.php */
