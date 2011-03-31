@@ -4,10 +4,10 @@
  *
  * This class manages the registry object and its mapping to the database
  *
+ * @package		Registry
+ * @version		1.0
  * @author 		Richard Davey <info@richarddavey.com>
  * @copyright 	Copyright (c) 2011, Richard Davey
- * @package		CodeIgniter
- * @subpackage	Libraries
  * @link		https://github.com/richarddavey/codeigniter-registry
  * @todo 		Add option for encryption
  * @todo 		Add sub keys
