@@ -37,8 +37,8 @@ class Registry {
 	 * Default values
 	 *
      */	
-	private $reg_use_database		= FALSE;
-	private $reg_table_name			= '';
+	private $_reg_use_database	= FALSE;
+	private $_reg_table_name	= '';
 	
 	/**
 	 * Constructor
@@ -57,7 +57,7 @@ class Registry {
 		$this->CI =& get_instance();
 		
 		// Are we using a database?  If so, load it
-		if ($this->reg_use_database === TRUE AND $this->reg_table_name != '')
+		if ($this->_reg_use_database === TRUE AND $this->_reg_table_name != '')
 		{
 			// ensure db is loaded
 			$this->CI->load->database();
@@ -84,9 +84,9 @@ class Registry {
 		{
 			foreach ($params as $key => $val)
 			{
-				if (in_array($key, array('reg_use_database', 'reg_table_name')) AND isset($this->$key))
+				if (isset($this->{'_' . $key}))
 				{
-					$this->$key = $val;
+					$this->{'_' . $key} = $val;
 				}
 			}
 		}
@@ -179,7 +179,7 @@ class Registry {
 	private function _registry_read()
 	{
 		// get generic settings
-		$query = $this->CI->db->get($this->reg_table_name);
+		$query = $this->CI->db->get($this->_reg_table_name);
 		
 		if ($query->num_rows() > 0) 
 		{ 	
