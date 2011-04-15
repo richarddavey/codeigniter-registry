@@ -166,7 +166,7 @@ class Registry {
 	public function get_item($name) 
 	{
 		// get registry value
-		return isset($this->override->$name) ? $this->override->$name : (isset($this->registry->$name) ? $this->registry->$name : null);
+		return isset($this->override->$name) ? $this->override->$name : (isset($this->registry->$name) ? $this->registry->$name : NULL);
 	}
 	
 	// --------------------------------------------------------------------
